@@ -10,3 +10,5 @@ npx honkit build
 mv ./_book/* .
 cd ..
 
+# after
+chmod +x ./publish.sh
