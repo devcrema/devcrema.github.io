@@ -5,7 +5,7 @@ mv ./_book/* .
 
 # build books
 # for test
-cd test-honkit
+cd test-honkit || exit
 npx honkit build
 mv ./_book/* .
 cd ..
