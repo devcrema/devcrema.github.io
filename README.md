@@ -1,3 +1,5 @@
-# devcrema (Park SungEun)
+# devcrema (Park SungEun) blog
 
-first book list test : [link](/test-honkit/)
+devcrema의 블로그입니다.
+
+- [github](https://github.com/devcrema)

@@ -3,7 +3,7 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>Introduction · HonKit</title>
+        <title>Overview · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 3.6.17">
@@ -56,7 +56,7 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="coroutine-migration-guide/" />
+    <link rel="next" href="why_coroutine.html" />
     
     
 
@@ -91,7 +91,7 @@
                 <a href="./">
             
                     
-                    Introduction
+                    Overview
             
                 </a>
             
@@ -99,12 +99,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="coroutine-migration-guide/">
+        <li class="chapter " data-level="1.2" data-path="why_coroutine.html">
             
-                <a href="coroutine-migration-guide/">
+                <a href="why_coroutine.html">
             
                     
-                    kotlin coroutine migration guide
+                    Why Coroutine
             
                 </a>
             
@@ -112,19 +112,38 @@
             
         </li>
     
-
-    
-        
-        <li class="divider"></li>
-        
-        
-    
-        <li class="chapter " data-level="2.1" data-path="commends.html">
+        <li class="chapter " data-level="1.3" data-path="reactive_to_coroutine.html">
             
-                <a href="commends.html">
+                <a href="reactive_to_coroutine.html">
             
                     
-                    blog commands
+                    Reactive to Coroutine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="how_to_use_coroutine.html">
+            
+                <a href="how_to_use_coroutine.html">
+            
+                    
+                    How to use Coroutine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="integrate_with_reactor_example.html">
+            
+                <a href="integrate_with_reactor_example.html">
+            
+                    
+                    Integrate with Reactor Example
             
                 </a>
             
@@ -162,7 +181,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Introduction</a>
+        <a href="." >Overview</a>
     </h1>
 </div>
 
@@ -177,10 +196,24 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="devcrema-park-sungeun-blog">devcrema (Park SungEun) blog</h1>
-<p>devcrema의 블로그입니다.</p>
+                                <h1 id="overview">Overview</h1>
+<h2 id="coroutine이란">coroutine이란?</h2>
 <ul>
-<li><a href="https://github.com/devcrema" target="_blank">github</a></li>
+<li>co-routine, 협력하는 루틴이라는 뜻</li>
+<li>코루틴은 쉽게 말해 하나의 비동기로 실행할 수 있는 함수라고 이해할 수 있음</li>
+<li>코루틴은 경량화된 쓰레드를 지원하는 패러다임으로 볼 수 있음</li>
+<li>경량화된 쓰레드라는 뜻은 하나의 쓰레드를 루틴마다 일시정지하며 비동기적으로 활용할 수 있기 때문임</li>
+<li>kotlin 뿐만 아니라 go, python 등 다양한 언어에서 지원하고 있음</li>
+</ul>
+<h2 id="java와의-관계">JAVA와의 관계</h2>
+<ul>
+<li>현재 coroutine은 자바 코드를 호출할 수는 있지만 자바에서 kotlin coroutine을 호출하면 제대로 동작을 보장하지 않음</li>
+<li>대부분의 major한 프레임워크에서 지원하지만 일부 미지원하는 부분이 존재하고 있음</li>
+</ul>
+<h2 id="reactive-stream-library-와의-관계">Reactive Stream Library 와의 관계</h2>
+<ul>
+<li>RxJava, Reactor와 같은 Reactive stream 라이브러리들과는 반대되는 관계가 아님</li>
+<li>아직 수많은 프레임워크와 라이브러리들이 위 두개의 reactive 라이브러리들을 사용하기 있기 때문에 coroutine에서는 연동을 위한 모듈을 지원하고 있음</li>
 </ul>
 
                                 
@@ -210,7 +243,7 @@
             
                 
                 
-                <a href="coroutine-migration-guide/" class="navigation navigation-next navigation-unique" aria-label="Next page: kotlin coroutine migration guide">
+                <a href="why_coroutine.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Why Coroutine">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -221,7 +254,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"kotlin coroutine migration guide","level":"1.2","depth":1,"path":"coroutine-migration-guide/README.md","ref":"coroutine-migration-guide/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2021-03-01T14:13:17.966Z","type":"markdown"},"gitbook":{"version":"3.6.17","time":"2021-03-01T14:21:58.473Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Overview","level":"1.1","depth":1,"next":{"title":"Why Coroutine","level":"1.2","depth":1,"path":"why_coroutine.md","ref":"why_coroutine.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2021-03-01T13:38:58.361Z","type":"markdown"},"gitbook":{"version":"3.6.17","time":"2021-03-01T14:22:00.306Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
