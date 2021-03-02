@@ -1,16 +1,20 @@
 #!/bin/sh
 # build root
+cd src || exit
 npx honkit build
-mv ./_book/* .
+mv ./_book/* ..
 
 # build books
-# for test
+# TODO python으로 디렉토리별로 만들도록 하기
 cd coroutine-migration-guide || exit
 npx honkit build
-mv ./_book/* .
+mkdir -p ../../coroutine-migration-guide
+mv ./_book/* ../../coroutine-migration-guide
+cd ../../coroutine-migration-guide || exit
 ../customize_html.py "$(pwd)/index.html"
-cd ..
+cd ../src || exit
 
 # after
+cd ..
 chmod +x ./publish.sh
 chmod +x ./customize_html.py
