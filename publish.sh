@@ -8,7 +8,9 @@ mv ./_book/* .
 cd coroutine-migration-guide || exit
 npx honkit build
 mv ./_book/* .
+../customize_html.py "$(pwd)/index.html"
 cd ..
 
 # after
 chmod +x ./publish.sh
+chmod +x ./customize_html.py
