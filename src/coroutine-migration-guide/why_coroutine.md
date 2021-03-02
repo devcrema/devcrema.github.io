@@ -31,6 +31,7 @@ try {
 ## 편의성
 - reactor에서 zip하는 순간 tuple로 묶이기 때문에 가독성을 저하시키고 사용을 불편하게 만들지만
 - coroutine에서는 async await로 가독성을 유지한채로 async하게 동작시킬 수 있음
+- Mono에서는 null을 사용할 수 없어 empty로 처리해야하지만 suspend fun은 nullable이나 null을 반환할 수 있다.
 
 ### reactor concurrency
 ```kotlin
