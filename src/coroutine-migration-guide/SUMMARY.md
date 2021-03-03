@@ -2,9 +2,9 @@
 
 * [Overview](README.md)
 * [Why Coroutine](why_coroutine.md)
-* [Compare With Reactive](compare_with_reactive.md)
-* [Integrate With Reactor](integrate_with_reactor.md)
-* [Integrate with Reactor Example](integrate_with_reactor_example.md)
+* [Comparison With Reactive](comparison_with_reactive.md)
+* [Integrating With Reactor](integrating_with_reactor.md)
+* [Examples of Integration with Reactor](examples_of_integration_with_reactor.md)
 
 ----
 

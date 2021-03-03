@@ -1,4 +1,4 @@
-# integrate with reactor
+# integrating with reactor
 - reactor와 RxJava 모두 reactive-stream interface를 지원하기 때문에 아래 모듈로 사용 가능함
 - ex: Flux, Mono, Flowable 들은 모두 reactive-stream  org.reactivestreams.Publisher의 구현체임 
 

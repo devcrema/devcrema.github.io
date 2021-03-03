@@ -1,6 +1,6 @@
-# Compare with Reactive
+# Comparison with Reactive
 
-## compare with other reactive stream library
+## comparison with reactive libraries
 
 | Feature | RxJava | Reactor | Coroutine |
 | ----- | ----------- | ----------- | ------- |
