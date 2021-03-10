@@ -37,6 +37,31 @@ try {
     log.info("failed $e")
 }
 ```
+## reactor subscribeOn vs coroutine withContext
+### reactor subscribeOn
+```kotlin
+Mono.fromCallable { "inside reactor scheduler" }
+    .subscribeOn(Schedulers.boundedElastic())
+```
+### coroutine withContext
+```kotlin
+withContext(Dispatchers.IO) {
+    "inside coroutine dispatcher"
+}
+```
+## reactor subscribe vs coroutine launch
+### reactor subscribe
+```kotlin
+Mono.fromCallable { "inside mono" }
+    .subscribe { message -> log.info("$message") }
+```
+### coroutine launch
+```kotlin
+CoroutineScope(Dispatchers.IO).launch {
+    log.info("inside coroutine")
+}
+```
+
 ## reactor zip vs coroutine async
 ### reactor zip
 ```kotlin
@@ -64,6 +89,38 @@ println(cat.await())
 println(dog.await())
 println(hamster.await())
 ```
+
+## reactor parallel flux vs coroutine parallel flow
+### reactor parallel flux
+```kotlin
+Flux.range(1,10)
+    .parallel(10)
+    .runOn(Schedulers.newParallel("parallel", 10))
+    .map { num ->
+        sleep(1000)
+        "$num received"
+    }.subscribe { log.info("$it") }
+```
+### coroutine parallel flow
+```kotlin
+
+val dispatcher = Executors.newFixedThreadPool(10).asCoroutineDispatcher()
+CoroutineScope(dispatcher).launch {
+    (1..10).asFlow()
+        .map { num ->
+            this.async {
+                sleep(1000)
+                "$num received"
+            }
+        }
+        .buffer(10)
+        .map { deferred -> deferred.await() }
+        .collect {
+            log.info("$it")
+        }
+}
+```
+
 ## handling error
 ### reactor
 ```kotlin
